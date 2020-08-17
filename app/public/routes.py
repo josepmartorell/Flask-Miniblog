@@ -19,6 +19,11 @@ def index():
     return render_template("public/index.html", post_pagination=post_pagination)
 
 
+@public_bp.route("/about")
+def about():
+    return render_template("about.html")
+
+
 @public_bp.route("/p/<string:slug>/", methods=['GET', 'POST'])
 def show_post(slug):
     logger.info('Showing a post')
