@@ -19,6 +19,21 @@ def index():
     return render_template("public/index.html", post_pagination=post_pagination)
 
 
+@public_bp.route("/spiderweb")
+def spiderweb():
+    return render_template("spiderweb.html")
+
+
+@public_bp.route("/patch")
+def patch():
+    return render_template("patch.html")
+
+
+@public_bp.route("/documentation")
+def documentation():
+    return render_template("documentation.html")
+
+
 @public_bp.route("/about")
 def about():
     return render_template("about.html")
