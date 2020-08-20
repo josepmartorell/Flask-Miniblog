@@ -26,7 +26,11 @@ def spiderweb():
 
 @public_bp.route("/patch")
 def patch():
-    return render_template("patch.html")
+    logger.info('Displaying blog posts')
+    page = int(request.args.get('page', 1))
+    per_page = current_app.config['ITEMS_PER_PAGE']
+    post_pagination = Post.all_paginated(page, per_page)
+    return render_template("public/deployment.html", post_pagination=post_pagination)
 
 
 @public_bp.route("/documentation")
