@@ -74,19 +74,19 @@
       </div>
     </div>
     <div id="main"> <a name="TemplateInfo"></a>
-      <h1>Blog <span class="gray">Info</span></h1>
-      <p><strong>jtech.network 2.0</strong> has been created for the resolution of incidents related to the development of sorfware for <strong>data extraction</strong>.  By clicking on the <a href="{{ url_for('public.patch') }}"> PATCH Deployment </a> tab, you will access a list of problems solved over time.</br>
+      <h1>Patch <span class="gray">Deployment Posts</span></h1>
+      <p><strong>jtech.network 2.0</strong> has been created for the resolution of incidents related to the development of sorfware for <strong>data extraction</strong>.  By clicking on the <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by/2.5/"> Manual tab 1.0 </a>, you will access a list of problems solved over time.</br>
        I want to share this tool with all those developers who want to help solve them while sharing the list of solved issues for the benefit of all.</p>
       <p>Good luck and I hope you find it useful!</p>
       <p class="comments align-right"> <a href="#">Read more</a> : <a href="#">Comments(7)</a> : Nov 08, 2006 </p>
       <a name="SampleTags"></a>
-      <h1>Sample Code</h1>
-      <h3>#1scr@py0000</h3>
+      <h1>Sample Code Example</h1>
+      <h3>paging code patch for a scrapy project</h3>
       <p><code> next_page = response.xpath( <br/>
         &nbsp;&nbsp;&nbsp;&nbsp;'.//li[@class=" active"]/following-sibling::li[1]/a/@href').extract_first()<br/><br/>
         if next_page is not None:<br/>
         &nbsp;&nbsp;&nbsp;&nbsp;yield response.follow(url=next_page,callback=self.parse) </code></p>
-      <h3>Fragment Data Sheet</h3>
+      <h3>Example of patch identification data entry</h3>
       <ul>
         <li><span>date: 2020/07/17</span></li>
         <li><span>keys:</span></li>
@@ -96,6 +96,9 @@
         <li><span>Livecoin</span></li>
         <li><span><a href="http://www.livecoin.net/en/news/list/">http://www.livecoin.net/en/news/list/</a></span></li>
       </ol>
+      <p>
+        &nbsp;{% block content %}{% endblock %}
+      </p>
       <h3>Blockquote</h3>
       <blockquote>
         <p>&#34;To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.&#34; &#45; Ralph Waldo Emerson</p>

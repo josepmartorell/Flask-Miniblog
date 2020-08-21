@@ -28,7 +28,7 @@ def spiderweb():
 def patch():
     logger.info('Displaying blog posts')
     page = int(request.args.get('page', 1))
-    per_page = current_app.config['ITEMS_PER_PAGE']
+    per_page = current_app.config['ITEMS_PER_LIST']
     post_pagination = Post.all_paginated(page, per_page)
     return render_template("public/deployment.html", post_pagination=post_pagination)
 
@@ -59,6 +59,24 @@ def show_post(slug):
         comment.save()
         return redirect(url_for('public.show_post', slug=post.title_slug))
     return render_template("public/post_view.html", post=post, form=form)
+
+
+@public_bp.route("/patch/p/<string:slug>/", methods=['GET', 'POST'])
+def show_patch(slug):
+    logger.info('Showing a post')
+    logger.debug(f'Slug: {slug}')
+    post = Post.get_by_slug(slug)
+    if not post:
+        logger.info(f'Post {slug} does not exist')
+        abort(404)
+    form = CommentForm()
+    if current_user.is_authenticated and form.validate_on_submit():
+        content = form.content.data
+        comment = Comment(content=content, user_id=current_user.id,
+                          user_name=current_user.name, post_id=post.id)
+        comment.save()
+        return redirect(url_for('public.show_patch', slug=post.title_slug))
+    return render_template("public/patch_view.html", post=post, form=form)
 
 
 @public_bp.route("/error")
