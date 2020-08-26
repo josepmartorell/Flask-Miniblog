@@ -34,7 +34,7 @@
     <ul>
       <li><a href="#" id="current">Home</a></li>
       <li><a href="{{ url_for('public.spiderweb') }}">Spiderweb</a></li>
-      <li><a href="{{ url_for('public.patch') }}">PATCH Deployment</a></li>
+      <li><a href="{{ url_for('public.patch') }}">Patch Deployment</a></li>
       <li><a href="{{ url_for('public.documentation') }}">Documentation & Downloads</a></li>
       <li><a href="{{ url_for('public.about') }}">About</a></li>
     </ul>
@@ -75,13 +75,11 @@
     </div>
     <div id="main"> <a name="TemplateInfo"></a>
       <h1>Web Scrapers<span class="gray"> Info Blog</span></h1>
-      <p><strong>Web scrapers 2.0</strong> has been created for the resolution of incidents related to the development of sorfware for <strong>data extraction</strong>.  By clicking on the <a href="{{ url_for('public.patch') }}"> Patch tab 1.0 </a>, you will access a list of problems solved over time.</br>
-       I want to share this tool with all those developers who want to help solve them while sharing the list of solved issues for the benefit of all.</p>
-      <p>Good luck and I hope you find it useful!</p>
+      <p><strong>Web scrapers 2.0</strong> Web scrapers 2.0 WELCOME to the website of those who like scratching pages around. Here you will find small tricks to scraping, it is not a website to learn webScraping, it is a blog where key code fragments are published in the development of applications for the extraction of data from websites. Do not forget to register before clicking on the upper right corner of the page, so you can log in and leave your comments. By clicking on the <a href="{{ url_for('public.patch') }}">Patch Deployment</a> tab, you can access the complete and displayed list of all posts. Synthetically on this same page below you will find a micro pagination of these posts. I want to share this tool with all those developers who want to help solve them while sharing the list of solved problems for the benefit of all.</p>
       <p class="comments align-right"> <a href="#">Read more</a> : <a href="#">Comments(7)</a> : Sep 19, 2019 </p>
       <a name="SampleTags"></a>
-      <h1>Sample Code Example</h1>
-      <h3>paging code patch for a scrapy project</h3>
+      <h1>Patches</h1>
+      <h3>Example of patch screenshot</h3>
       <p><code> next_page = response.xpath( <br/>
         &nbsp;&nbsp;&nbsp;&nbsp;'.//li[@class=" active"]/following-sibling::li[1]/a/@href').extract_first()<br/><br/>
         if next_page is not None:<br/>
