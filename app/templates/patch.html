@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-<title>j2-Flask: Miniblog</title>
+<title>{% block title %}{% endblock %}</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" href="{{ url_for('static', filename='ablaze.css') }}" />
 </head>
@@ -34,7 +34,7 @@
     <ul>
       <li><a href="{{ url_for('public.index') }}">Home</a></li>
       <li><a href="{{ url_for('public.spiderweb') }}">Spiderweb</a></li>
-      <li><a href="#" id="current">PATCH Deployment</a></li>
+      <li><a href="#" id="current">Patch Deployment</a></li>
       <li><a href="{{ url_for('public.documentation') }}">Documentation & Downloads</a></li>
       <li><a href="{{ url_for('public.about') }}">About</a></li>
     </ul>
