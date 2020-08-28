@@ -46,21 +46,21 @@
       <div class="sidebox">
         <h1>Sidebar Menu</h1>
         <ul class="sidemenu">
-          <li><a href="#" class="top">Home</a></li>
-          <li><a href="#TemplateInfo">Blog Info</a></li>
-          <li><a href="#SampleTags">Sample Code</a></li>
-          <li><a href="#">More Samples...</a></li>
-          <li><a href="#">Freemium Video Tutorials</a></li>
+          <li><a href="{{ url_for('public.index') }}">Home</a></li>
+          <li><a href="{{ url_for('public.index') }}">Blog Info</a></li>
+          <li><a href="{{ url_for('public.spiderweb') }}">NEWS of the Spiderweb</a></li>
+          <li><a href="{{ url_for('public.patch') }}">Patch Deployment</a></li>
+          <li><a href="{{ url_for('public.documentation') }}">Documentation & Downloads</a></li>
         </ul>
       </div>
       <div class="sidebox">
         <h1>Frameworks</h1>
         <ul class="sidemenu">
-          <li><a href="#" class="top">Scrapy</a></li>
-          <li><a href="#">Beautifulsoup4</a></li>
-          <li><a href="#">Modules to make requests</a></li>
-          <li><a href="#">Splash</a></li>
-          <li><a href="#">Selenium</a></li>
+          <li><a href="{{ url_for('public.documentation') }}">Scrapy</a></li>
+          <li><a href="{{ url_for('public.documentation') }}">Beautifulsoup4</a></li>
+          <li><a href="{{ url_for('public.documentation') }}">Requests</a></li>
+          <li><a href="{{ url_for('public.documentation') }}">Splash</a></li>
+          <li><a href="{{ url_for('public.documentation') }}">Selenium</a></li>
         </ul>
       </div>
       <div class="sidebox">
@@ -101,7 +101,7 @@
         </li>
         <li><span>Project's name: W2M pro</span>
           <ul>
-            <li><span>Description: "Web Scraping/REST API advanced travel display automation project"</span></li>
+            <li><span>Description: "Web Scraping/API advanced project of travel automated spreadsheets"</span></li>
             <li><span>Main python packages used: Selenium, requests, bs4, openpyxl, smtplib</span></li>
           </ul>
         </li>

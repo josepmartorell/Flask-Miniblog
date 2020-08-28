@@ -48,19 +48,19 @@
         <ul class="sidemenu">
           <li><a href="#" class="top">Home</a></li>
           <li><a href="#TemplateInfo">Blog Info</a></li>
-          <li><a href="#SampleTags">Sample Code</a></li>
-          <li><a href="#">More Samples...</a></li>
-          <li><a href="#">Freemium Video Tutorials</a></li>
+          <li><a href="{{ url_for('public.spiderweb') }}">NEWS of the Spiderweb</a></li>
+          <li><a href="{{ url_for('public.patch') }}">Patch Deployment</a></li>
+          <li><a href="{{ url_for('public.documentation') }}">Documentation & Downloads</a></li>
         </ul>
       </div>
       <div class="sidebox">
         <h1>Frameworks</h1>
         <ul class="sidemenu">
-          <li><a href="#" class="top">Scrapy</a></li>
-          <li><a href="#">Beautifulsoup4</a></li>
-          <li><a href="#">Modules to make requests</a></li>
-          <li><a href="#">Splash</a></li>
-          <li><a href="#">Selenium</a></li>
+          <li><a href="{{ url_for('public.documentation') }}">Scrapy</a></li>
+          <li><a href="{{ url_for('public.documentation') }}">Beautifulsoup4</a></li>
+          <li><a href="{{ url_for('public.documentation') }}">Requests</a></li>
+          <li><a href="{{ url_for('public.documentation') }}">Splash</a></li>
+          <li><a href="{{ url_for('public.documentation') }}">Selenium</a></li>
         </ul>
       </div>
       <div class="sidebox">
@@ -142,7 +142,7 @@
       </ul>
     </div>
     <div class="col2 float-right">
-      <p> &copy; copyright 2020 <strong>Josep Martorell Ar�nega</strong><br />
+      <p> &copy; copyright 2020 <strong>Josep Martorell Aránega</strong><br />
         Design by: <a href="https://www.styleshout.com/"><strong>styleshout</strong></a> &nbsp; &nbsp; Valid <a href="http://jigsaw.w3.org/css-validator/check/referer"><strong>CSS</strong></a> | <a href="http://validator.w3.org/check/referer"><strong>XHTML</strong></a> </p>
       <ul>
         <li><a href="#"><strong>Home</strong></a></li>

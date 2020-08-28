@@ -46,21 +46,21 @@
       <div class="sidebox">
         <h1>Sidebar Menu</h1>
         <ul class="sidemenu">
-          <li><a href="#" class="top">Home</a></li>
-          <li><a href="#TemplateInfo">Blog Info</a></li>
-          <li><a href="#SampleTags">Sample Code</a></li>
-          <li><a href="#">More Samples...</a></li>
-          <li><a href="#">Freemium Video Tutorials</a></li>
+          <li><a href="{{ url_for('public.index') }}">Home</a></li>
+          <li><a href="{{ url_for('public.index') }}">Blog Info</a></li>
+          <li><a href="{{ url_for('public.spiderweb') }}">NEWS of the Spiderweb</a></li>
+          <li><a href="#TemplateInfo">Patch Deployment</a></li>
+          <li><a href="{{ url_for('public.documentation') }}">Documentation & Downloads</a></li>
         </ul>
       </div>
       <div class="sidebox">
         <h1>Frameworks</h1>
         <ul class="sidemenu">
-          <li><a href="#" class="top">Scrapy</a></li>
-          <li><a href="#">Beautifulsoup4</a></li>
-          <li><a href="#">Modules to make requests</a></li>
-          <li><a href="#">Splash</a></li>
-          <li><a href="#">Selenium</a></li>
+          <li><a href="{{ url_for('public.documentation') }}">Scrapy</a></li>
+          <li><a href="{{ url_for('public.documentation') }}">Beautifulsoup4</a></li>
+          <li><a href="{{ url_for('public.documentation') }}">Requests</a></li>
+          <li><a href="{{ url_for('public.documentation') }}">Splash</a></li>
+          <li><a href="{{ url_for('public.documentation') }}">Selenium</a></li>
         </ul>
       </div>
       <div class="sidebox">
@@ -74,30 +74,14 @@
       </div>
     </div>
     <div id="main"> <a name="TemplateInfo"></a>
-      <h1>Patch <span class="gray">Deployment Posts</span></h1>
+      <h1>Patch <span class="gray">Deployment</span></h1>
       <p><strong>Web Scrapers 2.0</strong>  In this blog we publish a collection of patches that provide answers and solutions to various problems or questions that arise when developing Python <strong>Web Scraping</strong> applications using Requests, Beautifulsoup4 or Scrapy sometimes in combination with frameworks such as Selenium or Splash to render JavaScript on websites that make use of AJAX. By clicking on the <a href="{{ url_for('public.documentation') }}">Documentation & Downloads</a> tab, you will access a page with all the technical documentation related to the published patches to date.
         From the upper right corner you can register or log in directly if you are already, remember that you must do so if you want to leave your comments. Please, do it if you see that you can contribute something to the solutions and tricks presented here.</p>
       <p class="comments align-right"> <a href="#">Read more</a> : <a href="#">Comments(7)</a> : Sep 19, 2019 </p>
       <a name="SampleTags"></a>
-      <h1>Patches</h1>
-      <h3>Example of patch screenshot</h3>
-      <p><code> next_page = response.xpath( <br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;'.//li[@class=" active"]/following-sibling::li[1]/a/@href').extract_first()<br/><br/>
-        if next_page is not None:<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;yield response.follow(url=next_page,callback=self.parse) </code></p>
-      <h3>Example of patch identification data entry</h3>
-      <ul>
-        <li><span>date: 2020/07/17</span></li>
-        <li><span>keys:</span></li>
-      </ul>
-      <ol>
-        <li><span>pagination</span></li>
-        <li><span>Livecoin</span></li>
-        <li><span><a href="http://www.livecoin.net/en/news/list/">http://www.livecoin.net/en/news/list/</a></span></li>
-      </ol>
-      <p>
+      <h1>Posts</h1>
+      <h3>List displayed with all entries</h3>
         &nbsp;{% block content %}{% endblock %}
-      </p>
       <h3>Blockquote</h3>
       <blockquote>
         <p>&#34;To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.&#34; &#45; Ralph Waldo Emerson</p>
@@ -131,7 +115,7 @@
       </ul>
     </div>
     <div class="col2 float-right">
-      <p> &copy; copyright 2020 <strong>Josep Martorell Ar�nega</strong><br />
+      <p> &copy; copyright 2020 <strong>Josep Martorell Aránega</strong><br />
         Design by: <a href="https://www.styleshout.com/"><strong>styleshout</strong></a> &nbsp; &nbsp; Valid <a href="http://jigsaw.w3.org/css-validator/check/referer"><strong>CSS</strong></a> | <a href="http://validator.w3.org/check/referer"><strong>XHTML</strong></a> </p>
       <ul>
         <li><a href="#"><strong>Home</strong></a></li>

@@ -46,21 +46,21 @@
       <div class="sidebox">
         <h1>Sidebar Menu</h1>
         <ul class="sidemenu">
-          <li><a href="#" class="top">Home</a></li>
-          <li><a href="#TemplateInfo">Blog Info</a></li>
-          <li><a href="#SampleTags">Sample Code</a></li>
-          <li><a href="#">More Samples...</a></li>
-          <li><a href="#">Freemium Video Tutorials</a></li>
+          <li><a href="{{ url_for('public.index') }}">Home</a></li>
+          <li><a href="{{ url_for('public.index') }}">Blog Info</a></li>
+          <li><a href="{{ url_for('public.spiderweb') }}">NEWS of the Spiderweb</a></li>
+          <li><a href="{{ url_for('public.patch') }}">Patch Deployment</a></li>
+          <li><a href="#TemplateInfo">Documentation & Downloads</a></li>
         </ul>
       </div>
       <div class="sidebox">
         <h1>Frameworks</h1>
         <ul class="sidemenu">
-          <li><a href="#" class="top">Scrapy</a></li>
-          <li><a href="#">Beautifulsoup4</a></li>
-          <li><a href="#">Modules to make requests</a></li>
-          <li><a href="#">Splash</a></li>
-          <li><a href="#">Selenium</a></li>
+          <li><a href="https://scrapy.org/">Scrapy</a></li>
+          <li><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">Beautifulsoup4</a></li>
+          <li><a href="https://requests.readthedocs.io/en/master/">Requests</a></li>
+          <li><a href="https://splash.readthedocs.io/en/stable/">Splash</a></li>
+          <li><a href="https://selenium-python.readthedocs.io/">Selenium</a></li>
         </ul>
       </div>
       <div class="sidebox">
@@ -80,16 +80,6 @@
       <a name="SampleTags"></a>
       <h1>Resources</h1>
       <h3>Web Scraping Resources</h3>
-      <ul>
-        <li><span>Scrapy</span></li>
-        <li><span>Selenium</span></li>
-        <li><span>Splash</span></li>
-        <li><span>Beautifulsoup4</span>
-        <li><span>Requests</span></li>
-        <li><span>Flask</span>
-        <li><span>Flask-RESTful</span>
-        <li><span>Bootstrap</span>
-      </ul>
       <ol>
         <li><span>Resource's name: Scrapy.</span>
           <ul>
@@ -108,7 +98,7 @@
         <li><span>Resource's name: Splash & Selenium.</span>
           <ul>
             <li><span><a href="https://splash.readthedocs.io/en/stable/"><strong>Splash</strong></a> - A javascript rendering service.</span></li>
-            <li><span><a href="https://splash.readthedocs.io/en/stable/"><strong>Selenium</strong></a> with <strong>Python</strong> - readthedocs.</span></li>
+            <li><span><a href="https://selenium-python.readthedocs.io/"><strong>Selenium</strong></a> with <strong>Python</strong> - readthedocs.</span></li>
             <li><span><a href="https://dzone.com/articles/perform-actions-using-javascript-in-python-seleniu"><strong>Interaction with Javascript</strong></a>: JavaScript statements through Python Selenium WebDriver.</span></li>
           </ul>
         </li>
@@ -116,12 +106,6 @@
           <ul>
             <li><span><a href="https://flask.palletsprojects.com/en/1.1.x/"><strong>Flask’s documentation</strong></a> "Official Reference Tutorial"</span></li>
             <li><span><a href="https://jinja.palletsprojects.com/en/2.11.x/templates/"><strong> Jinja Template Designer Documentation</strong></a>: Linked from the Flask’s documentation.</span></li>
-            <li><span><a href="https://flask-restful.readthedocs.io/en/latest/"><strong>Flask-RESTful</strong></a>: Flask library for representational state transfer application program interface App development :)</span></li>
-            <li><span><a href="https://flask-jwt-extended.readthedocs.io/en/stable/"><strong>Flask-JWT</strong></a> Extended’s Documentation.</span></li>
-          </ul>
-        </li>
-        <li><span>Resource's name: Bootstrap.</span>
-          <ul>
             <li><span><a href="https://getbootstrap.com/"><strong>Bootstrap 4</strong></a>: The world’s most popular framework for building responsive sites.</span></li>
           </ul>
         </li>
