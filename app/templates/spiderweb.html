@@ -78,7 +78,8 @@
     </div>
     <div id="main"> <a name="TemplateInfo"></a>
       <h1>NEWS <span class="gray"> of the Spiderweb</span></h1>
-      <p><strong>Web Scrapers 2.0 </strong>This project consists of developing a specialized automatic webScraping diary (as would be the example of this website) for this platform. Said digital journal would be updated by means of a Python application created with the Scrapy framework which would be hosted on Heroku and using the patch called Scrapyd. Through this patch it is intended to use, while the budget does not allow it, the same services of the ScrapingHub platform to automatically fire the spiders according to a programming schedule only at zero cost, even when the quality is<span id="dots">...</span><span id="more"> not the same. Simply to test this service and improve its performance.</span></p>
+      <p><strong>Web Scrapers 2.0 </strong>This project consists of developing a specialized automatic webScraping diary (as would be the example of this website) for this platform. Said digital journal would be updated by means of a Python application created with the Scrapy framework which would be hosted on Heroku and using the patch called Scrapyd. Through this patch it is intended to use, while the budget does not allow it, the same services of the ScrapingHub platform to automatically fire the spiders according to a programming schedule only at zero cost, even when the quality is<span id="dots">...</span><span id="more"> not the same. Simply to test this service and improve its performance.
+      </span></p>
       <p class="myBtn align-right"> <button onclick="myFunction()" id="myBtn">Read more</button></p>
         <script>
           function myFunction() {
@@ -98,22 +99,19 @@
           }
         </script>
       <a name="SampleTags"></a>
-      <h1>Curriculum vitae</h1>
-      <h3>Computer engineering student</h3>
-      <p><code> next_page = response.xpath( <br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;'.//li[@class=" active"]/following-sibling::li[1]/a/@href').extract_first()<br/><br/>
-        if next_page is not None:<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;yield response.follow(url=next_page,callback=self.parse) </code></p>
-      <h3>Fragment Data Sheet</h3>
+      <h1>Spider Diary</h1>
+      <h3>Web Scraping News Hunters</h3>
+      <p><code><img src="{{ url_for('static', filename='spider.jpg') }}" width="444" height="200" alt="spider"  class="float-left" /><br/><br/><br/><br/>
+      <br/><br/><br/></code></p>
+      <h3>Most outstanding headers of the day</h3>
       <ul>
-        <li><span>date: 2020/07/17</span></li>
-        <li><span>keys:</span></li>
+        <li><span><a href="https://www.wsj.com/">The Wall Street Journal</a>: "New Wave of Layoffs Makes Pandemic Job Losses Permanent".</span></li>
+        <li><span><a href="https://www.nytimes.com/">The New York Times</a>: "Trump Program to Cover Uninsured Covid-19 Patients Falls Short of Promise".</span></li>
+        <li><span><a href="https://www.washingtonpost.com/">The Washington Post</a>: "How Minneapolis police handled the in-custody death of a Black man 10 years before George Floyd".</span></li>
+        <li><span><a href="https://edition.cnn.com/">CNN Edition</a>: "The restraint the US President showed at his party's convention disappeared at his latest campaign rally as he told supporters he would 'wing it'".</span></li>
+        <li><span><a href="https://miamidiario.com/">Miami Diario</a>: "¡Fatal! Dos muertos dejó accidente aéreo en Broward +vídeo".</span></li>
+        <li><span><a href="https://eu.usatoday.com/">USA Today</a>: "Chadwick Boseman: His 5 greatest roles, from 'Black Panther' to 'Da 5 Bloods'".</span></li>
       </ul>
-      <ol>
-        <li><span>pagination</span></li>
-        <li><span>Livecoin</span></li>
-        <li><span>http://www.livecoin.net/en/news/list/</span></li>
-      </ol>
       <h3>Blockquote</h3>
       <blockquote>
         <p>&#34;To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.&#34; &#45; Ralph Waldo Emerson</p>
