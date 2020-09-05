@@ -87,3 +87,8 @@ def show_error():
 @public_bp.route('/robots.txt')
 def send_robots_txt():
     return send_file(current_app.config['BASE_DIR'] + '/robots.txt')
+
+
+@public_bp.route('/sitemap.xml')
+def send_sitemap_xml():
+    return send_file(current_app.config['BASE_DIR'] + '/sitemap.xml')
