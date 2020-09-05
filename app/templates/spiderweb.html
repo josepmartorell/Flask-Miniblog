@@ -51,7 +51,7 @@
             <ul class="sidemenu">
               <li><a href="{{ url_for('public.index') }}">Home</a></li>
               <li><a href="{{ url_for('public.index') }}">Blog Info</a></li>
-              <li><a href="#TemplateInfo">NEWS of the Spiderweb</a></li>
+              <li><a href="#TemplateInfo">Spiderweb</a></li>
               <li><a href="{{ url_for('public.patch') }}">Patch Deployment</a></li>
               <li><a href="{{ url_for('public.documentation') }}">Documentation & Downloads</a></li>
             </ul>
@@ -77,13 +77,13 @@
           </div>
         </div>
         <div id="main"> <a name="TemplateInfo"></a>
-          <h1>NEWS <span class="gray"> of the Spiderweb</span></h1>
-          <p><strong>Web Scrapers 2.0 </strong>This project consists of developing a specialized automatic webScraping diary (as would be the example of this website) for this platform. Said digital journal would be updated by means of a Python application created with the Scrapy framework which would be hosted on Heroku and using the patch called Scrapyd. Through this patch it is intended to use, while the budget does not allow it, the same services of the ScrapingHub platform to automatically fire the spiders according to a programming schedule only at zero cost, even when the quality is<span id="dots">...</span><span id="more"> not the same. Simply to test this service and improve its performance.
+          <h1>Crawling <span class="gray"> Through the Spiderweb</span></h1>
+          <p><strong>Web Scrapers 2.0 </strong>This project consists of developing scripts specialized in web scraping. Some of these programs can be accessed by clicking on the links you will find on this page at the bottom of the mechanical spider image. These programs are published on the Internet and are just part of a small army of trackers that serve as the basis for more complicated later developments. Some of the patches, that you will find in the <a href="{{ url_for('public.patch') }}">Patch Deployment</a> tab, have been implemented as solutions to implement in some parts of them. They are just examples, although interesting, and they largely stage the<span id="dots">...</span><span id="more"> use of posts in the development of this type of software in this miniblog, in addition to serving as a basis for access to the community as a help and way of sharing technical solutions to users as well as the challenges of creating these applications.
           </span></p>
           <p class="myBtn align-right"> <button onclick="myFunction()" id="myBtn">Read more</button></p>
           <a name="SampleTags"></a>
           <h1>Spiders</h1>
-          <h3>Web Scraping News Hunters</h3>
+          <h3>Automated data hunters</h3>
           <p><code><img src="{{ url_for('static', filename='spider.jpg') }}" width="400" height="400" alt="spider"  class="float-left" /><br/><br/><br/><br/>
           <br/><br/><br/></code></p>
           <h3>Most outstanding headers of the day</h3>
