@@ -1,6 +1,6 @@
 import logging
 
-from flask import abort, render_template, redirect, url_for, request, current_app
+from flask import abort, render_template, redirect, url_for, request, current_app, send_file
 from flask_login import current_user
 
 from app.models import Post, Comment
@@ -82,3 +82,8 @@ def show_error():
     res = 1 / 0
     posts = Post.get_all()
     return render_template("public/index.html", posts=posts)
+
+
+@public_bp.route('/robots.txt')
+def send_robots_txt():
+    return send_file(current_app.config['BASE_DIR'] + '/robots.txt')
