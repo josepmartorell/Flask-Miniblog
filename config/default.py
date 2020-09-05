@@ -1,3 +1,4 @@
+import os
 from os.path import abspath, dirname, join
 
 
@@ -8,7 +9,7 @@ BASE_DIR = dirname(dirname(abspath(__file__)))
 MEDIA_DIR = join(BASE_DIR, 'media')
 POSTS_IMAGES_DIR = join(MEDIA_DIR, 'posts')
 
-SECRET_KEY = '7110c8ae51a4b5af97be6534caef90e4bb9bdcb3380af008f90b23a5d1616bf319bc298105da20fe'
+SECRET_KEY = os.urandom(32)
 
 # Database configuration
 SQLALCHEMY_TRACK_MODIFICATIONS = False
@@ -33,3 +34,5 @@ MAIL_DEBUG = False
 
 ITEMS_PER_PAGE = 3
 ITEMS_PER_LIST = 200
+
+BASE_DIR = 'static'
