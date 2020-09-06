@@ -92,3 +92,8 @@ def send_robots_txt():
 @public_bp.route('/sitemap.xml')
 def send_sitemap_xml():
     return send_file(current_app.config['BASE_DIR'] + '/sitemap.xml')
+
+
+@public_bp.route('/feed')
+def send_feed_rss():
+    return send_file(current_app.config['BASE_DIR'] + '/feed.rss')
