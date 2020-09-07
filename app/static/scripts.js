@@ -23,6 +23,11 @@
     * -------------------------------------------------- */
 
   function myFunction2() {
-    var intro_value = document.getElementById("mySearch");
-    alert('Value selected: ' + intro_value.value + ".\n\nPress OK to send query...")
+    val = document.getElementById("mySearch").value;
+    if( val == null || val.length == 0 || /^\s+$/.test(val) ) {
+        alert('Empty field! Please type a word.');
+    }else{
+        alert('Search for "' + val + '" keyword.' )
+    }
+
   }
