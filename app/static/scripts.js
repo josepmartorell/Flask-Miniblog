@@ -18,3 +18,11 @@
       moreText.style.display = "inline";
     }
   }
+
+   /* search engine
+    * -------------------------------------------------- */
+
+  function myFunction2() {
+    var intro_value = document.getElementById("mySearch");
+    alert('Value selected: ' + intro_value.value + ".\n\nPress OK to send query...")
+  }
