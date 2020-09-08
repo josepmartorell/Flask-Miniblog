@@ -27,10 +27,10 @@
         <h1 id="logo">Web Scrapers 2.0</h1>
         <h2 id="slogan">Troubleshoot webScraping Miniblog...</h2>
         <div class="searchform">
-          <form action="#" onsubmit="myFunction2()">
+          <form action="#">
             <p>
               <input name="search_query" class="textbox" type="text" id="mySearch" />
-              <input name="search" class="button" value="Search" type="submit" />
+              <input name="search" class="button" value="Search" type="button" onclick="myFunction2()"/>
             </p>
           </form>
         </div>
@@ -76,17 +76,22 @@
             <p>If you are interested in supporting my work and would like to contribute, you are welcome to make a small donation through the donate link on my website - it will be a great help and will surely be appreciated.</p>
           </div>
         </div>
-        <div id="main"> <a name="TemplateInfo"></a>
+        <br id="main"> <a name="TemplateInfo"></a>
           <h1>Crawling <span class="gray"> Through the Spiderweb</span></h1>
           <p><strong>Web Scrapers 2.0 </strong>This project consists of developing scripts specialized in web scraping. Some of these programs can be accessed by clicking on the links you will find on this page at the bottom of the mechanical spider image. These programs are published on the Internet and are just part of a small army of trackers that serve as the basis for more complicated later developments. Some of the patches, that you will find in the <a href="{{ url_for('public.patch') }}">Patch Deployment</a> tab, have been implemented as solutions to implement in some parts of them. They are just examples, although interesting, and they largely stage the<span id="dots">...</span><span id="more"> use of posts in the development of this type of software in this miniblog, in addition to serving as a basis for access to the community as a help and way of sharing technical solutions to users as well as the challenges of creating these applications.
           </span></p>
           <p class="myBtn align-right"> <button onclick="myFunction()" id="myBtn">Read more</button></p>
-          <a name="SampleTags"></a>
+          <a name="Spiders"></a>
           <h1>Spiders</h1>
           <h3>Automated data hunters</h3>
           <p><code><img src="{{ url_for('static', filename='spider.jpg') }}" width="400" height="400" alt="spider"  class="float-left" /><br/><br/><br/><br/>
           <br/><br/><br/></code></p>
           <h3>Most outstanding spiders of the day</h3>
+          <a name="instagram"></a>
+          <a name="livecoin"></a>
+          <a name="finance"></a>
+          <a name="tinydeal"></a>
+          <a name="bs4"></a>
           <ul>
             <li><span><a href="https://github.com/josepmartorell/bs4_instagram">bs4 Instagram</a>: "This application allows you to track instagram followers and extract images to store them in a folder along with a spreadsheet with its subtitles automatically written".</span></li>
             <li><span><a href="https://github.com/josepmartorell/Livecoin">Livecoin</a>: "This challenger spider crawls all over website corners gathering all possible information to index results in multiple ways".</span></li>
