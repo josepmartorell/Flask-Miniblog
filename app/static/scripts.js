@@ -17,13 +17,14 @@
       btnText.innerHTML = "Read less";
       moreText.style.display = "inline";
     }
+
   }
 
    /* search engine
     * -------------------------------------------------- */
 
   function myFunction2() {
-    var val = document.getElementById("mySearch").value;
+    var val = document.getElementById("mySearch").value.toLowerCase();
     if( val == null || val.length == 0 || /^\s+$/.test(val) ) {
         alert('Empty field! Please type a word.');
     }else{

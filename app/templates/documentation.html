@@ -8,170 +8,173 @@
 </style>
 <link rel="stylesheet" href="{{ url_for('static', filename='ablaze.css') }}" />
 </head>
-<body>
-<div>
-    <ul class="user-info">
-        {% if current_user.is_anonymous %}
-            <li><a href="{{ url_for('auth.login') }}">Login</a></li>
-            <li> | </li>
-            <li><a href="{{ url_for('auth.show_signup_form') }}">Sign in</a></li>
-        {% else %}
-            <li>{{ current_user.name }}</li>
-            <li> | </li>
-            <li><a href="{{ url_for('auth.logout') }}">Logout</a></li>
-        {% endif %}
-    </ul>
-</div>
-<div id="header">
-  <div id="header-content">
-    <h1 id="logo">Web Scrapers 2.0</h1>
-    <h2 id="slogan">Troubleshoot webScraping Miniblog...</h2>
-    <div class="searchform">
-      <form action="#">
-        <p>
-          <input name="search_query" class="textbox" type="text" />
-          <input name="search" class="button" value="Search" type="submit" />
-        </p>
-      </form>
+  <body>
+    <div>
+        <ul class="user-info">
+            {% if current_user.is_anonymous %}
+                <li><a href="{{ url_for('auth.login') }}">Login</a></li>
+                <li> | </li>
+                <li><a href="{{ url_for('auth.show_signup_form') }}">Sign in</a></li>
+            {% else %}
+                <li>{{ current_user.name }}</li>
+                <li> | </li>
+                <li><a href="{{ url_for('auth.logout') }}">Logout</a></li>
+            {% endif %}
+        </ul>
     </div>
-    <ul>
-      <li><a href="{{ url_for('public.index') }}">Home</a></li>
-      <li><a href="{{ url_for('public.spiderweb') }}">Spiderweb</a></li>
-      <li><a href="{{ url_for('public.patch') }}">Patch Deployment</a></li>
-      <li><a href="#" id="current">Documentation & Downloads</a></li>
-      <li><a href="{{ url_for('public.about') }}">About</a></li>
-    </ul>
-  </div>
-</div>
-<div id="content-wrap">
-  <div id="content">
-    <div id="sidebar">
-      <div class="sidebox">
-        <h1>Sidebar Menu</h1>
-        <ul class="sidemenu">
+    <div id="header">
+      <div id="header-content">
+        <h1 id="logo">Web Scrapers 2.0</h1>
+        <h2 id="slogan">Troubleshoot webScraping Miniblog...</h2>
+        <div class="searchform">
+          <form action="#">
+            <p>
+              <input name="search_query" class="textbox" type="text" id="mySearch" />
+              <input name="search" class="button" value="Search" type="button" onclick="myFunction2()"/>
+            </p>
+          </form>
+        </div>
+        <ul>
           <li><a href="{{ url_for('public.index') }}">Home</a></li>
-          <li><a href="{{ url_for('public.index') }}">Blog Info</a></li>
           <li><a href="{{ url_for('public.spiderweb') }}">Spiderweb</a></li>
           <li><a href="{{ url_for('public.patch') }}">Patch Deployment</a></li>
-          <li><a href="#TemplateInfo">Documentation & Downloads</a></li>
+          <li><a href="#" id="current">Documentation & Downloads</a></li>
+          <li><a href="{{ url_for('public.about') }}">About</a></li>
         </ul>
-      </div>
-      <div class="sidebox">
-        <h1>Frameworks</h1>
-        <ul class="sidemenu">
-          <li><a href="https://scrapy.org/">Scrapy</a></li>
-          <li><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">Beautifulsoup4</a></li>
-          <li><a href="https://requests.readthedocs.io/en/master/">Requests</a></li>
-          <li><a href="https://splash.readthedocs.io/en/stable/">Splash</a></li>
-          <li><a href="https://selenium-python.readthedocs.io/">Selenium</a></li>
-        </ul>
-      </div>
-      <div class="sidebox">
-        <h1>Wise Words</h1>
-        <p>&quot;Our life is what our thoughts make it.&quot;</p>
-        <p class="align-right">- Marcus Aurelius</p>
-      </div>
-      <div class="sidebox">
-        <h1>Support Scrapers</h1>
-        <p>If you are interested in supporting my work and would like to contribute, you are welcome to make a small donation through the donate link on my website - it will be a great help and will surely be appreciated.</p>
       </div>
     </div>
-    <div id="main"> <a name="TemplateInfo"></a>
-      <h1>Documentation <span class="gray">& Downloads</span></h1>
-      <p><strong>Web Scrapers 2.0 </strong>This is the navigation page through which you will access all the technical documentation related to the published patches. It is non-dynamic content, which may eventually be out of date, it is recommended that you consult the sources mentioned for possible updates that may exist. On the other hand, the versions of all the computer packages used in the debugging of the patches as well as the python interpreter are identified in the entry of each patch, thus avoiding surprises later when implementing said patches. It is reasonable to think that<span id="dots">...</span><span id="more"> the comments take into account the versions of both python and packages to create a good social environment among developers that allows sharing ideas or tricks with certain guarantees on their suitability.</span></p>
-      <p class="myBtn align-right"> <button onclick="myFunction()" id="myBtn">Read more</button></p>
-        <script>
-          function myFunction() {
-            var dots = document.getElementById("dots");
-            var moreText = document.getElementById("more");
-            var btnText = document.getElementById("myBtn");
+    <div id="content-wrap">
+      <div id="content">
+        <div id="sidebar">
+          <div class="sidebox">
+            <h1>Sidebar Menu</h1>
+            <ul class="sidemenu">
+              <li><a href="{{ url_for('public.index') }}">Home</a></li>
+              <li><a href="{{ url_for('public.index') }}">Blog Info</a></li>
+              <li><a href="{{ url_for('public.spiderweb') }}">Spiderweb</a></li>
+              <li><a href="{{ url_for('public.patch') }}">Patch Deployment</a></li>
+              <li><a href="#TemplateInfo">Documentation & Downloads</a></li>
+            </ul>
+          </div>
+          <div class="sidebox">
+            <h1>Frameworks</h1>
+            <ul class="sidemenu">
+              <li><a href="https://scrapy.org/">Scrapy</a></li>
+              <li><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">Beautifulsoup4</a></li>
+              <li><a href="https://requests.readthedocs.io/en/master/">Requests</a></li>
+              <li><a href="https://splash.readthedocs.io/en/stable/">Splash</a></li>
+              <li><a href="https://selenium-python.readthedocs.io/">Selenium</a></li>
+            </ul>
+          </div>
+          <div class="sidebox">
+            <h1>Wise Words</h1>
+            <p>&quot;Our life is what our thoughts make it.&quot;</p>
+            <p class="align-right">- Marcus Aurelius</p>
+          </div>
+          <div class="sidebox">
+            <h1>Support Scrapers</h1>
+            <p>If you are interested in supporting my work and would like to contribute, you are welcome to make a small donation through the donate link on my website - it will be a great help and will surely be appreciated.</p>
+          </div>
+        </div>
+        <div id="main"> <a name="documentation"></a>
+          <h1>Documentation <span class="gray">& Downloads</span></h1>
+          <p><strong>Web Scrapers 2.0 </strong>This is the navigation page through which you will access all the technical documentation related to the published patches. It is non-dynamic content, which may eventually be out of date, it is recommended that you consult the sources mentioned for possible updates that may exist. On the other hand, the versions of all the computer packages used in the debugging of the patches as well as the python interpreter are identified in the entry of each patch, thus avoiding surprises later when implementing said patches. It is reasonable to think that<span id="dots">...</span><span id="more"> the comments take into account the versions of both python and packages to create a good social environment among developers that allows sharing ideas or tricks with certain guarantees on their suitability.</span></p>
+          <p class="myBtn align-right"> <button onclick="myFunction()" id="myBtn">Read more</button></p>
+            <script>
+              function myFunction() {
+                var dots = document.getElementById("dots");
+                var moreText = document.getElementById("more");
+                var btnText = document.getElementById("myBtn");
 
-            if (dots.style.display === "none") {
-              dots.style.display = "inline";
-              btnText.innerHTML = "Read more";
-              moreText.style.display = "none";
-            } else {
-              dots.style.display = "none";
-              btnText.innerHTML = "Read less";
-              moreText.style.display = "inline";
-            }
-          }
-        </script>
-      <a name="SampleTags"></a>
-      <h1>Resources</h1>
-      <h3>Web scraping resources</h3>
-      <ol>
-        <li><span>Resource's name: Scrapy.</span>
-          <ul>
-            <li><span><a href="https://scrapy.org/"><strong>www.scrapy.org</strong></a> - An open source and collaborative framework for extracting the data you need from websites. Maintained by Scrapinghub and many other contributors.</span></li>
-            <li><span><a href="https://support.scrapinghub.com/support/solutions/articles/22000216178-scrapy-cloud-vs-scrapyd-using-heroku-"><strong>Scrapy Cloud</strong></a> vs <strong>Scrapyd</strong> (using Heroku).</span></li>
-            <li><span><a href="https://github.com/scrapinghub/scrapyrt"><strong>ScrapyRT</strong></a>: An API for Scrapy spiders.</span></li>
-            <li><span><a href="https://www.scrapinghub.com/scrapy-cloud/"><strong>www.scrapinghub.com</strong></a> - Web scraping services and tools leader.</span></li>
-          </ul>
-        </li>
-        <li><span>Resource's name: Web scraping with requests and BeautifulSoup4 in Python.</span>
-          <ul>
-            <li><span><a href="https://requests.readthedocs.io/en/master/"><strong>Requests</strong></a>: HTTP for Humans™</span></li>
-            <li><span><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/"><strong>Beautifulsoup4</strong></a>: A story from Alice in Wonderland.</span></li>
-          </ul>
-        </li>
-        <li><span>Resource's name: Splash & Selenium.</span>
-          <ul>
-            <li><span><a href="https://splash.readthedocs.io/en/stable/"><strong>Splash</strong></a> - A javascript rendering service.</span></li>
-            <li><span><a href="https://selenium-python.readthedocs.io/"><strong>Selenium</strong></a> with <strong>Python</strong> - readthedocs.</span></li>
-            <li><span><a href="https://dzone.com/articles/perform-actions-using-javascript-in-python-seleniu"><strong>Interaction with Javascript</strong></a>: JavaScript statements through Python Selenium WebDriver.</span></li>
-          </ul>
-        </li>
-        <li><span>Resource's name: Flask.</span>
-          <ul>
-            <li><span><a href="https://flask.palletsprojects.com/en/1.1.x/"><strong>Flask’s documentation</strong></a> "Official Reference Tutorial"</span></li>
-            <li><span><a href="https://jinja.palletsprojects.com/en/2.11.x/templates/"><strong> Jinja Template Designer Documentation</strong></a>: Linked from the Flask’s documentation.</span></li>
-            <li><span><a href="https://getbootstrap.com/"><strong>Bootstrap 4</strong></a>: The world’s most popular framework for building responsive sites.</span></li>
-          </ul>
-        </li>
-      </ol>
-      <h3>Blockquote</h3>
-      <blockquote>
-        <p>&#34;To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.&#34; &#45; Ralph Waldo Emerson</p>
-      </blockquote>
-      <p> <a href="#"><img src="{{ url_for('static', filename='firefox-gray.jpg') }}" width="100" height="121" alt="firefox-gray"  class="float-left" /></a> This website in its entirety is part of a professional project that has been conceived by the author to improve the activity and professional experience without deriving responsibility for the misuse of the information presented here. All responsibility for their abuse is declined and the right is reserved to eliminate from the database anyone who deviates from the social and civic norm. This page neither collects cookies nor uses user tracking techniques. </p>
-      <h3>Powered by Flask</h3>
-      <br />
+                if (dots.style.display === "none") {
+                  dots.style.display = "inline";
+                  btnText.innerHTML = "Read more";
+                  moreText.style.display = "none";
+                } else {
+                  dots.style.display = "none";
+                  btnText.innerHTML = "Read less";
+                  moreText.style.display = "inline";
+                }
+              }
+            </script>
+          <a name="resources"></a>
+          <h1>Resources</h1>
+          <h3>Web scraping resources</h3>
+          <ol>
+            <li><span>Resource's name: Scrapy.</span>
+              <ul>
+                <li><span><a href="https://scrapy.org/"><strong>www.scrapy.org</strong></a> - An open source and collaborative framework for extracting the data you need from websites. Maintained by Scrapinghub and many other contributors.</span></li>
+                <li><span><a href="https://support.scrapinghub.com/support/solutions/articles/22000216178-scrapy-cloud-vs-scrapyd-using-heroku-"><strong>Scrapy Cloud</strong></a> vs <strong>Scrapyd</strong> (using Heroku).</span></li>
+                <li><span><a href="https://github.com/scrapinghub/scrapyrt"><strong>ScrapyRT</strong></a>: An API for Scrapy spiders.</span></li>
+                <li><span><a href="https://www.scrapinghub.com/scrapy-cloud/"><strong>www.scrapinghub.com</strong></a> - Web scraping services and tools leader.</span></li>
+              </ul>
+            </li>
+            <li><span>Resource's name: Web scraping with requests and BeautifulSoup4 in Python.</span>
+              <ul>
+                <li><span><a href="https://requests.readthedocs.io/en/master/"><strong>Requests</strong></a>: HTTP for Humans™</span></li>
+                <li><span><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/"><strong>Beautifulsoup4</strong></a>: A story from Alice in Wonderland.</span></li>
+              </ul>
+            </li>
+            <li><span>Resource's name: Splash & Selenium.</span>
+              <ul>
+                <li><span><a href="https://splash.readthedocs.io/en/stable/"><strong>Splash</strong></a> - A javascript rendering service.</span></li>
+                <li><span><a href="https://selenium-python.readthedocs.io/"><strong>Selenium</strong></a> with <strong>Python</strong> - readthedocs.</span></li>
+                <li><span><a href="https://dzone.com/articles/perform-actions-using-javascript-in-python-seleniu"><strong>Interaction with Javascript</strong></a>: JavaScript statements through Python Selenium WebDriver.</span></li>
+              </ul>
+            </li>
+            <li><span>Resource's name: Flask.</span>
+              <ul>
+                <li><span><a href="https://flask.palletsprojects.com/en/1.1.x/"><strong>Flask’s documentation</strong></a> "Official Reference Tutorial"</span></li>
+                <li><span><a href="https://jinja.palletsprojects.com/en/2.11.x/templates/"><strong> Jinja Template Designer Documentation</strong></a>: Linked from the Flask’s documentation.</span></li>
+                <li><span><a href="https://getbootstrap.com/"><strong>Bootstrap 4</strong></a>: The world’s most popular framework for building responsive sites.</span></li>
+              </ul>
+            </li>
+          </ol>
+          <h3>Blockquote</h3>
+          <blockquote>
+            <p>&#34;To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.&#34; &#45; Ralph Waldo Emerson</p>
+          </blockquote>
+          <p> <a href="#"><img src="{{ url_for('static', filename='firefox-gray.jpg') }}" width="100" height="121" alt="firefox-gray"  class="float-left" /></a> This website in its entirety is part of a professional project that has been conceived by the author to improve the activity and professional experience without deriving responsibility for the misuse of the information presented here. All responsibility for their abuse is declined and the right is reserved to eliminate from the database anyone who deviates from the social and civic norm. This page neither collects cookies nor uses user tracking techniques. </p>
+          <h3>Powered by Flask</h3>
+          <br />
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-<div id="footer">
-  <div id="footer-content">
-    <div class="col float-left">
-      <h2>Site Partners</h2>
-      <ul>
-        <li><a href="https://plantillashtmlgratis.com/en/home/"><strong>Free HTML Templates</strong> - The best free HTML templates</a></li>
-        <li><a href="https://www.templatemonster.com/"><strong>TemplateMonster</strong> - Best templates on the net!</a></li>
-        <li><a href="https://www.4templates.com/"><strong>4templates</strong> - Low Cost Hi-Quality Templates</a></li>
-        <li><a href="https://cooltext.com/"><strong>Cool Text</strong> - Cool Text Graphics Generator</a></li>
-        <li><a href="https://www.canva.com/"><strong>www.canva.com</strong> - Sophisticated design tools.</a></li>
-      </ul>
+    <div id="footer">
+      <div id="footer-content">
+        <div class="col float-left">
+          <h2>Site Partners</h2>
+          <ul>
+            <li><a href="https://plantillashtmlgratis.com/en/home/"><strong>Free HTML Templates</strong> - The best free HTML templates</a></li>
+            <li><a href="https://www.templatemonster.com/"><strong>TemplateMonster</strong> - Best templates on the net!</a></li>
+            <li><a href="https://www.4templates.com/"><strong>4templates</strong> - Low Cost Hi-Quality Templates</a></li>
+            <li><a href="https://cooltext.com/"><strong>Cool Text</strong> - Cool Text Graphics Generator</a></li>
+            <li><a href="https://www.canva.com/"><strong>www.canva.com</strong> - Sophisticated design tools.</a></li>
+          </ul>
+        </div>
+        <div class="col float-left">
+          <h2>Links</h2>
+          <ul>
+            <li><a href="https://www.remotepython.com/"><strong>www.remotepython.com</strong></a></li>
+            <li><a href="https://www.jobatus.es/trabajo-web-scraping/"><strong>Web Scraping Jobs</strong></a></li>
+            <li><a href="https://www.python.org/jobs/type/back-end/"><strong>Backend Python Developer</strong></a></li>
+            <li><a href="https://www.upwork.com/freelance-jobs/web-scraping/"><strong>Web Scraping Freelancer</strong></a></li>
+            <li><a href="https://flaskjobs.com/"><strong>wwww.flaskjobs.com</strong></a></li>
+          </ul>
+        </div>
+        <div class="col2 float-right">
+          <p> &copy; copyright 2020 <a href="https://s3.eu-west-1.amazonaws.com/jmartorell.tech/index.html"><strong>jmartorell.tech</strong></a><br />
+            Design by: <a href="https://www.styleshout.com/"><strong>styleshout</strong></a> &nbsp; &nbsp; Valid <a href="http://jigsaw.w3.org/css-validator/check/referer"><strong>CSS</strong></a> | <a href="http://validator.w3.org/check/referer"><strong>XHTML</strong></a> </p>
+          <ul>
+            <li><a href="#"><strong>Top</strong></a></li>
+            <li><a href="http://127.0.0.1:5000/sitemap.xml"><strong>Sitemap</strong></a></li>
+            <li><a href="http://127.0.0.1:5000/feed"><strong>RSS Feed</strong></a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="col float-left">
-      <h2>Links</h2>
-      <ul>
-        <li><a href="https://www.remotepython.com/"><strong>www.remotepython.com</strong></a></li>
-        <li><a href="https://www.jobatus.es/trabajo-web-scraping/"><strong>Web Scraping Jobs</strong></a></li>
-        <li><a href="https://www.python.org/jobs/type/back-end/"><strong>Backend Python Developer</strong></a></li>
-        <li><a href="https://www.upwork.com/freelance-jobs/web-scraping/"><strong>Web Scraping Freelancer</strong></a></li>
-        <li><a href="https://flaskjobs.com/"><strong>wwww.flaskjobs.com</strong></a></li>
-      </ul>
-    </div>
-    <div class="col2 float-right">
-      <p> &copy; copyright 2020 <a href="https://s3.eu-west-1.amazonaws.com/jmartorell.tech/index.html"><strong>jmartorell.tech</strong></a><br />
-        Design by: <a href="https://www.styleshout.com/"><strong>styleshout</strong></a> &nbsp; &nbsp; Valid <a href="http://jigsaw.w3.org/css-validator/check/referer"><strong>CSS</strong></a> | <a href="http://validator.w3.org/check/referer"><strong>XHTML</strong></a> </p>
-      <ul>
-        <li><a href="#"><strong>Top</strong></a></li>
-        <li><a href="http://127.0.0.1:5000/sitemap.xml"><strong>Sitemap</strong></a></li>
-        <li><a href="http://127.0.0.1:5000/feed"><strong>RSS Feed</strong></a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-</body>
+    <!-- Java Script
+    ================================================== -->
+    <script src="/static/scripts.js" charset="utf-8"></script>
+  </body>
 </html>
