@@ -23,11 +23,11 @@ APP_ENV_PRODUCTION = 'production'
 APP_ENV = ''
 
 # Email configuration
-MAIL_SERVER = 'your smtp server'
+MAIL_SERVER = 'smtp.gmail.com'
 MAIL_PORT = 587
-MAIL_USERNAME = 'your email'
-MAIL_PASSWORD = 'your password'
-DONT_REPLY_FROM_EMAIL = 'from address'
+MAIL_USERNAME = 'jetro4100@gmail.com'
+MAIL_PASSWORD = "secret"
+DONT_REPLY_FROM_EMAIL = 'jetro4100@gmail.com'
 ADMINS = ('jetro4100@gmail.com', )
 MAIL_USE_TLS = True
 MAIL_DEBUG = False
