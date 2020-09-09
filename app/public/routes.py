@@ -1,11 +1,11 @@
 import logging
 
-from flask import abort, render_template, redirect, url_for, request, current_app, send_file
+from flask import abort, render_template, redirect, url_for, request, current_app, send_file, flash
 from flask_login import current_user
 
 from app.models import Post, Comment
 from . import public_bp
-from .forms import CommentForm
+from .forms import CommentForm, ContactForm
 
 logger = logging.getLogger(__name__)
 
@@ -36,9 +36,15 @@ def documentation():
     return render_template("documentation.html")
 
 
-@public_bp.route("/about")
+@public_bp.route('/about', methods=['GET', 'POST'])
 def about():
-    return render_template("about.html")
+    form = ContactForm()
+
+    if request.method == 'POST':
+        return 'Form posted.'
+
+    elif request.method == 'GET':
+        return render_template('public/contact.html', form=form)
 
 
 @public_bp.route("/p/<string:slug>/", methods=['GET', 'POST'])
@@ -97,3 +103,6 @@ def send_sitemap_xml():
 @public_bp.route('/feed')
 def send_feed_rss():
     return send_file(current_app.config['BASE_DIR'] + '/feed.rss')
+
+
+
