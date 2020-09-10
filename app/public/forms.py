@@ -1,6 +1,8 @@
-from flask_wtf import FlaskForm, Form, validators
+from flask_wtf import FlaskForm, Form, CSRFProtect
 from wtforms import SubmitField, TextAreaField, StringField
 from wtforms.validators import DataRequired
+
+csrf = CSRFProtect()
 
 
 class CommentForm(FlaskForm):
