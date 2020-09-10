@@ -7,6 +7,10 @@ from app.models import Post, Comment
 from . import public_bp
 from .forms import CommentForm, ContactForm
 
+from flask_mail import Mail, Message
+
+from .. import mail
+
 logger = logging.getLogger(__name__)
 
 
@@ -103,6 +107,37 @@ def send_sitemap_xml():
 @public_bp.route('/feed')
 def send_feed_rss():
     return send_file(current_app.config['BASE_DIR'] + '/feed.rss')
+
+
+@public_bp.route('/contact', methods=['POST', 'GET'])
+def contact():
+    form = ContactForm()
+    if form.validate_on_submit():
+        print('-------------------------')
+        print(request.form['name'])
+        print(request.form['email'])
+        print(request.form['subject'])
+        print(request.form['message'])
+        print('-------------------------')
+        send_message(request.form)
+        return redirect('/success')
+
+    return render_template('public/contact.html', form=form)
+
+
+@public_bp.route('/success')
+def success():
+    return render_template('about.html')
+
+
+def send_message(message):
+    print(message.get('name'))
+
+    msg = Message(message.get('subject'), sender=message.get('email'),
+                  recipients=['jetro4100@gmail.com'],
+                  body=message.get('message')
+                  )
+    mail.send(msg)
 
 
 

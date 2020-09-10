@@ -2,21 +2,21 @@
  
 {% block content %}
   <h1>Contact</h1>
-  <form action="{{ url_for('public.about') }}" method=post>
+  <form action="{{ url_for('public.contact') }}" method=post>
     {{ form.hidden_tag() }}
- 
+
     {{ form.name.label }}
     {{ form.name }}
- 
+
     {{ form.email.label }}
     {{ form.email }}
- 
+
     {{ form.subject.label }}
     {{ form.subject }}
- 
+
     {{ form.message.label }}
     {{ form.message }}
- 
+
     {{ form.submit }}
   </form>
 {% endblock %}
